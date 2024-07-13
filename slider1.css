@@ -1,0 +1,167 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: darkcyan;
+}
+.hero h1{
+	text-align: center;
+	font-size: 45px;
+	font-family: fantasy;
+	letter-spacing: 7px;
+	color: white;
+	margin: 30px;
+}
+.slider-row{
+	display: flex;
+	flex-wrap: wrap;
+	width: 3200px;
+	transition: 0.5s;
+}
+.slider-col{
+	width: 800px;
+	height: 400px;
+	position: relative;
+}
+.user-img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+.user-img img{
+	height: 100%;
+	border-radius: 10px;
+	width: 320px;
+}
+.user-text{
+	background-color: #2d3a59;
+	font-family: system-ui;
+	color: white;
+	width: 500px;
+	height: 270px;
+	left: 0;
+	top: 50%;
+	position: absolute;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 1;
+    border-radius: 15px;
+}
+.user-text p{
+	font-size: 18px;
+	line-height: 30px;
+}
+.user-text h3{
+	margin: 20px 0 5px;
+    font-size: 18px;
+	color: white;
+}
+.container{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.indicator{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -50px;
+}
+.btn{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	margin: 4px;
+	border-radius: 15px;
+	background-color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.active{
+	width: 45px;
+}
+.testimonials{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+@media (max-width: 1024px) {
+	.container{
+		top: 80%;
+	}
+}
+@media (max-width: 768px) {
+	.container{
+		top: 80%;
+		width: 700px;
+	}
+	.user-img img{
+		width: 355px;
+	}
+	.user-text{
+		width: 468px;
+	}
+}
+@media (max-width: 425px) {
+    .container {
+        top: 80%;
+        width: 402px;
+    }
+	.slider-col{
+		position: relative;
+		height: auto;
+	}
+	.testimonials{
+		height: 146%;
+	}
+	.user-text {
+        width: 402px;
+        position: relative;
+    }
+	.user-img {
+		position: absolute;
+		top: 300px;
+		left: 23px;
+		height: 100%;
+	}
+	.indicator{
+		display: none;
+	}
+}
+@media (max-width: 375px) {
+    .container {
+        width: 325px;
+    }
+	.user-text {
+        width: 325px;
+    }
+	.user-text h3{
+		margin-top: 12px;
+	}
+	.user-img {
+		left: 14px;
+	}
+	.user-img img{
+		width: 296px;
+	}
+}
+@media (max-width: 320px) {
+	.slider-col{
+		left: 1%;
+	}
+	.user-text {
+        width: 296px;
+    }
+	.user-img {
+		left: 0;
+	}
+	.user-text h3{
+		display: none;
+	}
+}
